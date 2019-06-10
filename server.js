@@ -9,7 +9,7 @@ const server = express() //initialize server
 server.use(helmet());
 server.use(express.json())
 
-server.use("/api/users", userRouter)
+server.use("/api/register", userRouter)
 
 //testing server
 server.get('/', (req, res) => {
