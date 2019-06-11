@@ -3,7 +3,7 @@ const router = require("express").Router();
 const bcrypt = require("bcryptjs");
 const db = require("../data/helpers/user-model.js");
 
-router .post("/", async (req, res) => {
+router.post("/", async (req, res) => {
     let { username, password } = req.body;
     if (!username || !password) {
         res.status(401).json({ message: "Please enter valid credentials." });

@@ -5,7 +5,7 @@ const db = require("../data/helpers/user-model.js");
 
 router.get("/", async (req, res) => {
     const { username, password } = req.headers;
-    console.log(req.headers);
+    // console.log(req.headers);
     if (!username || !password) {
         res.status(401).json({ message: "Please enter valid credentials." });
     } else {

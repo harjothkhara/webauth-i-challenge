@@ -6,7 +6,7 @@ const db = require("../data/helpers/user-model.js");
 
 router.post("/", async (req, res) => {
     const { username, password } = req.body; //user credentials
-    console.log(req.body);
+    // console.log(req.body);
     if (!username || !password) {
         res.status(401).json({ message: "Please enter valid credentials." });
     } else {

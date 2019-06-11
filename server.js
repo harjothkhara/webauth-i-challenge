@@ -12,8 +12,8 @@ server.use(helmet());
 server.use(express.json())
 
 server.use("/api/register", registerRouter);
-server.use("/api/login", loginRouter)
-server.use("/api/register", userRouter)
+server.use("/api/login", loginRouter);
+server.use("/api/users", userRouter);
 
 //testing server
 server.get('/', (req, res) => {
@@ -21,6 +21,6 @@ server.get('/', (req, res) => {
   });
 
 
-module.exports = server
+module.exports = server;
 
 
