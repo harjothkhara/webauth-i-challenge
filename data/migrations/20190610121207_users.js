@@ -6,7 +6,9 @@ exports.up = function(knex, Promise) {
             .string("username", 128)
             .notNullable()
             .unique();
-        table.string("password", 30).notNullable();  
+        table.string("password", 30).notNullable();
+        table.string("first_name", 20);
+        table.string("last_name", 20);  
     });
 };
 
