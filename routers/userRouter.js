@@ -1,6 +1,5 @@
 //imports
 const router = require("express").Router();
-const bcrypt = require("bcryptjs");
 const db = require("../data/helpers/user-model.js");
 const restricted = require('./restricted-middleware.js'); 
 

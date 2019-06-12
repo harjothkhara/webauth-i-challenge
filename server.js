@@ -10,7 +10,7 @@ const userRouter = require('./routers/userRouter.js');
 const server = express() //initialize server
 
 const sessionConfig = {
-  name: "monster",
+  name: "cookie",
   secret: "keep it secret, keep it safe! -gandalf",
   cookie: {
     maxAge: null,
@@ -33,7 +33,7 @@ server.use(helmet());
 server.use(express.json())
 
 server.use(session(sessionConfig));
-server.use("/auth", authRouter);
+server.use("/api/auth", authRouter);
 server.use("/api/users", userRouter);
 
 //testing server
